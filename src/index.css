@@ -1,4 +1,6 @@
-span {
-  color: pink;
-  padding-left : 10px;
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Primavera",
+        "category": "pijama",
+        "description": "Disfruta de la frescura primaveral con el pijama Primavera. Hecho de tela suave, ofrece comodidad y estilo con su diseño floral y colores suaves. Perfecto para noches relajadas y mañanas tranquilas.",
+        "image": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/562c46f5-8784-416e-b261-c0d3d6bc0d89.3e3f67f65abd8ee3161c3d81e9792776.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "price": 20000
+    },
+    {
+        "id": 2,
+        "title": "Estrellas",
+        "category": "pijama",
+        "description": "Relájate con el pijama Estrella. diseñado en tela suave y cómoda. Su estampado de estrellas aporta un toque mágico a tus noches, haciéndolo ideal para un descanso reparador.",
+        "image": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/f1a01781-d192-4548-896e-04dd13e9782c.1d447e43fb28ac641e6edc344b72c9ca.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "price": 22000
+    },
+    {
+        "id": 3,
+        "title": "Oveja",
+        "category": "pijama",
+        "description": "Duerme plácidamente con el pijama Oveja. Suave y acogedor, con un tierno diseño de ovejas, es perfecto para envolver tus noches en tranquilidad y confort.",
+        "image": "https://m.media-amazon.com/images/I/61fAYmKGNSL._AC_UY580_.jpg",
+        "price": 21000
+    },
+    {
+        "id": 4,
+        "title": "Luna Encantada",
+        "category": "conjunto",
+        "description": "Descubre la magia de la noche con Luna Encantada, un conjunto de ropa interior que combina elegancia y sensualidad. Con detalles delicados y un diseño inspirado en la belleza de la luna, te hará sentir radiante y segura en cada momento.",
+        "image": "https://ae01.alicdn.com/kf/H191dafbc1b16440dad267fbc6ecf6314H/Conjunto-de-lencer-a-Sexy-de-encaje-para-mujer-Bralette-de-algod-n-con-almohadilla-fina.jpg_Q90.jpg_.webp",
+        "price": 32000
+    },
+    {
+        "id": 5,
+        "title": "Sueño de Seda",
+        "category": "conjunto",
+        "description": "Sumérgete en la suavidad de Sueño de Seda, un conjunto de ropa interior diseñado para envolver tu piel en un lujo irresistible. Con texturas sedosas y un ajuste perfecto, este conjunto es ideal para quienes buscan comodidad y sofisticación.",
+        "image": "https://www.dhresource.com/webp/m/0x0/f2/albu/g17/M00/70/A0/rBVa4WASLLuAGpgcAAOT-5xM82c569.jpg",
+        "price": 28000
+    }
+]
