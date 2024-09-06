@@ -1,29 +1,40 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import data from "../data/productos.json";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import loadingGif from "../assets/loading.gif";
+import {
+    getFirestore,
+    getDocs,
+    where,
+    query,
+    collection,
+} from "firebase/firestore"
 
 export const ItemListContainer = (props) => {
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const {id} = useParams();
-    useEffect(() => {
-        setLoading(true);
+const [items, setItems] = useState([]);
+const [loading, setLoading] = useState(true);
+const {id} = useParams();
 
-        new Promise((resolve, reject) => setTimeout(() => resolve(data), 2000))
-        .then((response) => {
-            if(!id) {
-                setItems(response);
-            } else {
-                const filtered = response.filter((i) => i.category === id);
-                setItems(filtered);
-            }
+useEffect(() => {
+const db = getFirestore();
+
+const ref = !id 
+? collection(db, "items") 
+: query(collection(db, "items"), where("categoryId", "==", id));
+
+getDocs(ref)
+    .then((snapshot)=> {
+        setItems(
+            snapshot.docs.map((doc) => {
+                return {id : doc.id, ...doc.data()};
+            })
+        );
     })
     .finally(() => setLoading(false));
-    },[id]);
+},[id]);
+
 
     if(loading) return <img src={loadingGif} alt="Cargando..." />;
     
@@ -31,7 +42,7 @@ export const ItemListContainer = (props) => {
         <Container className='mt-4 grid-container'>
         {items.map(i => 
             <Card key = {i.id} style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={i.image} />
+                <Card.Img variant="top" src={i.imageId} />
                 <Card.Body>
                     <Card.Title>{i.title}</Card.Title>
                     <Card.Text>
